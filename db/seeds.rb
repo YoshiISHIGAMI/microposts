@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# 200.times do |index|
+#   Micropost.create(
+#     content: Faker::Lorem.sentence,
+#     user_id: rand(3) + 1
+#   )
+# end
