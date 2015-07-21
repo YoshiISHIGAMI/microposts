@@ -1,0 +1,14 @@
+      <div class="clearfix">
+        <h1>
+          <%= gravatar_for @user %>
+          <%= @user.name %>
+        </h1>
+        <p>居住地：<%= @user.country %></p>
+      </div>
+
+      <p><%= @user.profile %></p>
+      
+      <ul class="nav nav-pills top-buffer" role="tablist">
+        <li role="presentation" class="active"><%= link_to 'フォロー', followings_user_path %></li>
+        <li role="presentation"><%= link_to 'フォローワー', followers_user_path %></li>
+      </ul>
