@@ -14,7 +14,8 @@ class UsersController < ApplicationController
   end
 
   def followers
-    @followers_user = @user.following_relationships
+    @followers_user = @user.followed_relationships
+    #@followers_user = @user.following_relationships.find_by(followed_id: other_user.id)
   end
 
   def new
