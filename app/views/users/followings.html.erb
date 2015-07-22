@@ -8,8 +8,10 @@
   </aside>
   <div class="col-md-8">
   <h3>フォロー</h3>
-  <%# @users.following.each do |user| %>
-<!--     <li class="list-group-item"></li> -->
-  <%# end %>
+  <ul class="list-group">
+    <% @followings_user.each do |followings_user| %>
+      <li class="list-group-item"><%= followings_user.followed_id %></li>
+    <% end %>
+  </ul>
   </div>
 </div>

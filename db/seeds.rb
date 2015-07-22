@@ -12,3 +12,12 @@
 #     user_id: rand(3) + 1
 #   )
 # end
+# 100.times do |index|
+#   User.create(
+#     name: Faker::Name.name,
+#     email: Faker::Internet.email,
+#     password_digest: 'password',
+#     profile: Faker::Company.catch_phrase,
+#     country: Faker::Address.country
+#   )
+# end

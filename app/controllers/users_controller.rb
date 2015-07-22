@@ -10,11 +10,11 @@ class UsersController < ApplicationController
   end
 
   def followings
-    
+    @followings_user = @user.following_relationships
   end
 
   def followers
-    
+    @followers_user = @user.following_relationships
   end
 
   def new
