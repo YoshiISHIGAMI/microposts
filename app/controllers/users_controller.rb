@@ -10,12 +10,11 @@ class UsersController < ApplicationController
   end
 
   def followings
-    @followings_user = @user.following_relationships
+    @followings_user = @user.following_users
   end
 
   def followers
-    # @followers_user = @user.following_relationships
-    #@followers_user = @user.following_relationships.find_by(followed_id: other_user.id)
+    @followers_user = @user.followed_users
   end
 
   def new
