@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def followers
-    @followers_user = @user.followed_users
+    @followers_user = @user.follower_users
   end
 
   def new
@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password, :password_confirmation, :profile, :country)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation, :profile, :country, :avatar)
   end
 
   def set_user

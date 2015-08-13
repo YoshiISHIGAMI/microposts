@@ -187,3 +187,17 @@ span.picture {
     border: 0;
   }
 }
+.user_info h1>img{
+  width: 80px;
+  float: left;
+  margin-right: 10px;
+}
+.user_info h1:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+.user_info h1>span{
+  font-weight: normal;
+  font-size: 14px;
+}

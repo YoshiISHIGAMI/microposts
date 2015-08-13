@@ -1,12 +1,17 @@
       <div class="clearfix">
         <h1>
+        <% if @user.avatar? %>
+          <img src="<%= @user.avatar %>" alt="">
+        <% else %>
           <%= gravatar_for @user %>
+        <% end %>
           <%= @user.name %>
+          <span>居住地：<%= @user.country %></span>
         </h1>
-        <p>居住地：<%= @user.country %></p>
       </div>
 
       <p><%= @user.profile %></p>
+      <p><%= link_to 'プロフィールを編集', edit_user_path %></p>
       
       <ul class="nav nav-pills top-buffer" role="tablist">
         <li role="presentation" class="active"><%= link_to "Profile", @user %></li>
